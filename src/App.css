@@ -13,6 +13,52 @@
   }
 }
 
+/* * Style the form - display items horizontally */
+*/ .form-newToDo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* Add some margins for each label */
+.form-newToDo label {
+  margin: 5px 10px 5px 30px;
+}
+
+/* Style the input fields */
+.form-newToDo input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Style the submit button */
+.form-newToDo button {
+  margin-left: 50px;
+  padding: 10px 10px;
+  background-color: rgb(28, 127, 226);
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.form-newToDo button:hover {
+  background-color: rgb(28, 127, 226, 0.8);
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-newToDo input {
+    margin: 10px 0;
+  }
+
+  .form-newToDo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
