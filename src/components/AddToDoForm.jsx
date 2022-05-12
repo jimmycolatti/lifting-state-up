@@ -21,7 +21,8 @@ const AddToDoForm = ({ tasks, setTasks, setTaskCompleted }) => {
       setTaskCompleted((prevCount) => prevCount + 1)
     }
 
-    setTasks([...tasks, newTask])
+    setTasks([newTask, ...tasks])
+    setNewTask(defaultTaskData)
   }
 
   const formStyle = {
